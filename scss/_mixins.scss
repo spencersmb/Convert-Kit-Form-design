@@ -1,0 +1,23 @@
+/* ----------------------------------------------------------------------------
+ * Breakpoints
+ *
+
+ * ------------------------------------------------------------------------- */
+@mixin breakpoint($point) {
+  @if $point == desktopXL {
+    @media only screen and (min-width: 1600px) { @content ; }
+  }@else if $point == desktop {
+    // Extra large. Above 75em (1200px)
+    @media only screen and (min-width: 1200px) { @content ; }
+  }@else if $point == laptop {
+    // Large. Above 62em (992px)
+    @media only screen and (min-width: 992px) { @content ; }
+  }@else if $point == tablet {
+    // Medium. Above 48em (768px)
+    @media only screen and (min-width: 768px) { @content ; }
+  }@else if $point == mobile {
+    // Small. Above 34em (544px)
+    @media (min-width: 544px)  { @content ; }
+
+  }
+}

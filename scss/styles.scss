@@ -1,0 +1,25 @@
+
+$blue: #aae2e4;
+$pink: #FF9981;
+$cinn: #DE7157;
+$yellow: #F4DBA4;
+$dark-blue: #313A54;
+$soft-blue: #5d6f80;
+$grey: #95989A;
+$light-grey: #e7e7e7;
+$dark-grey: #4E5361;
+$green: #87D387;
+$dark-green: #156a23;
+$dark-pink: #9e4f3c;
+$yellow-full: #ffe73c;
+
+
+/* ----------------------------------------------------------------------------
+ * Bourbon.io
+ * ------------------------------------------------------------------------- */
+@import '../node_modules/bourbon/app/assets/stylesheets/bourbon';
+@import 'family/_family.scss';
+@import 'mixins';
+
+// @import "old_form";
+@import "et_ck_form";
