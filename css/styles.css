@@ -33,10 +33,12 @@
   display: none;
   top: 50% !important;
   -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   background: #fff;
-  width: 700px;
+  width: 100%;
   max-width: 700px;
 }
 
@@ -50,37 +52,23 @@
 }
 
 .et_ck_vertical_subscription_form {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
 }
 
 .et_ck_content {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .et_ck_content {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 .et_ck_content .et_ck_form_fields,
 .et_ck_content .et_ck_form_img {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 50%;
-  -ms-flex: 1 0 50%;
   flex: 1 0 50%;
 }
 .et_ck_content .et_ck_form_img img {
@@ -89,8 +77,6 @@
   height: auto;
 }
 .et_ck_content .et_ck_form_fields {
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
   align-self: center;
 }
 
@@ -106,23 +92,13 @@
 }
 
 .et_ck_subscribe_form {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
 }
 
 .et_ck_control_group {
   margin-bottom: 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
 }
@@ -163,30 +139,16 @@
 }
 
 .et-input-container {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   font-size: 150%;
   padding: 1em;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   max-width: 1000px;
   margin: 0 auto;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 @media only screen and (min-width: 768px) {
   .et-input-container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
   }
 }
@@ -194,22 +156,13 @@
 .et-input {
   position: relative;
   z-index: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 2;
-  -webkit-flex: 2;
-  -ms-flex: 2;
   flex: 2;
   margin: 1em 0 1em 0;
   vertical-align: top;
   height: 50px;
 }
 .et-input.subscribe {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
   flex: 1;
 }
 @media only screen and (min-width: 768px) {
@@ -272,7 +225,6 @@
 }
 
 .input__label--yoshiko {
-  width: 100%;
   text-align: left;
   position: absolute;
   bottom: 100%;

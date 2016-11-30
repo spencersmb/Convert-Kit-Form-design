@@ -32,7 +32,7 @@
   	top: 50%!important;
     @include transform(translateY(-50%));
     background: #fff;
-    width: 700px;
+    width: 100%;
     max-width: 700px;
   }
 }
@@ -54,8 +54,11 @@
 
 .et_ck_content{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+	flex-direction: column;
+  @include breakpoint(tablet){
+		flex-direction: row;
+	  flex-wrap: wrap;
+	}
 
   .et_ck_form_fields,
   .et_ck_form_img{
@@ -124,6 +127,11 @@
   cursor: pointer;
   width: 100%;
 }
+
+
+
+
+//Custom Form animation
 .et_ck_form_container{
 	background: $blue;
 
@@ -222,7 +230,7 @@
 }
 
 .input__label--yoshiko {
-	width: 100%;
+	// width: 100%;
 	text-align: left;
 	position: absolute;
 	bottom: 100%;
